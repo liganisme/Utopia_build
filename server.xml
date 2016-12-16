@@ -102,7 +102,7 @@
 					directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log."
 					suffix=".txt" />
 				<Context path="/utopia" reloadable="false"
-					docBase="/usr/webapp/utopia/Utopia-0.0.1">
+					docBase="/usr/webapp/utopiarelease">
 				</Context>
 			</Host>
 		</Engine>
