@@ -101,6 +101,8 @@
 				<Valve className="org.apache.catalina.valves.AccessLogValve"
 					directory="logs" prefix="localhost_access_log." suffix=".txt"
 					pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+				<Context path="/utopia" docBase="Utopia-0.0.1" debug="0"
+					privileged="true" />
 			</Host>
 		</Engine>
 	</Service>
