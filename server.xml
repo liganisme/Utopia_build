@@ -88,7 +88,7 @@
 					resourceName="UserDatabase" />
 			</Realm>
 
-			<Host appBase="webapps" autoDeploy="true" name="localhost"
+			<Host appBase="" autoDeploy="true" name="localhost"
 				unpackWARs="true">
 
 				<!-- SingleSignOn valve, share authentication between web applications 
@@ -102,7 +102,7 @@
 					directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log."
 					suffix=".txt" />
 				<Context path="/utopia" reloadable="false"
-					docBase="/usr/webapp/utopiarelease">
+					docBase="/usr/webapp/utopiarelease/Utopia-0.0.1">
 				</Context>
 			</Host>
 		</Engine>
