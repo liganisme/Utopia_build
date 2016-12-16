@@ -88,8 +88,8 @@
 					resourceName="UserDatabase" />
 			</Realm>
 
-			<Host name="localhost" appBase="/usr/webapp/utopia" unpackWARs="true"
-				autoDeploy="true">
+			<Host appBase="webapps" autoDeploy="true" name="localhost"
+				unpackWARs="true">
 
 				<!-- SingleSignOn valve, share authentication between web applications 
 					Documentation at: /docs/config/valve.html -->
@@ -99,10 +99,11 @@
 				<!-- Access log processes all example. Documentation at: /docs/config/valve.html 
 					Note: The pattern used is equivalent to using pattern="common" -->
 				<Valve className="org.apache.catalina.valves.AccessLogValve"
-					directory="logs" prefix="localhost_access_log." suffix=".txt"
-					pattern="%h %l %u %t &quot;%r&quot; %s %b" />
-				<Context path="/utopia" docBase="Utopia-0.0.1" debug="0"
-					privileged="true" />
+					directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log."
+					suffix=".txt" />
+				<Context path="/utopia" reloadable="false"
+					docBase="/usr/webapp/utopia/Utopia-0.0.1">
+				</Context>
 			</Host>
 		</Engine>
 	</Service>
